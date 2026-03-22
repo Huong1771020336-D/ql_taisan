@@ -33,4 +33,22 @@
         'data/sample_data.xml',
     ],
     'demo': [],
+=======
+<<<<<<< HEAD
+
+    'demo': [
+        'demo/demo.xml',
+    ],
+
+    'assets': {
+        'web.assets_backend': [
+            'quan_ly_tai_san/static/src/css/tai_san.css',
+        ],
+    },
+    'installable': True,
+    'application': True,
+=======
+    'demo': [],
+>>>>>>> 2409fe7bc (update code)
+>>>>>>> 07732e381 (push to new repo)
 }
