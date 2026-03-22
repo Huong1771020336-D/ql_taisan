@@ -13,12 +13,12 @@ class ThuNhap(models.Model):
     description = fields.Text("Mô tả")
     id_nhan_vat = fields.Many2one("nhan_vat", string="Nhân vật")
 
-    @api.constrains('amount')
+    @api.constrains('so_tien')
     def _check_amount(self):
         for record in self:
-            if record.amount <= 0:
+            if record.so_tien <= 0:
                 raise ValidationError("Số tiền phải lớn hơn 0.")
 
     def total_income(self):
-        total = sum(record.amount for record in self.search([]))
+        total = sum(record.so_tien for record in self.search([]))
         return total
